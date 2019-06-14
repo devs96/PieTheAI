@@ -63,8 +63,8 @@ def sendEmail(to, content):
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.ehlo()
     server.starttls()
-    server.login('pizzacs16@gmail.com', 'Devanshu@1')
-    server.sendmail('pizzacs16@gmail.com', to, content)
+    server.login('Email', 'Password')
+    server.sendmail('Email', to, content)
     server.close()
 
 
@@ -101,7 +101,7 @@ if __name__ == "__main__":
 
         elif 'send email' in query:
             try:
-                receivers = {'abc': 'devanshusapra.ds@gmail.com'}
+                receivers = {'abc': 'Email'}
                 speak("Okay. Tell me the email address")
                 to = takeCommand().lower()
                 print(receivers[to])
